@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JSON Playground</title>
+  </head>
+  <body>
+
+    <ul id="people">
+    </ul>
+
+    <script>
+    //   var person = {
+    //     name: "Simon",
+    //     age: 25,
+    //     address: {
+    //       street: "asdasda",
+    //       city: "virum"
+    //     },
+    //     title: ["awesome", "cool"]
+    //   }
+    //
+    //   // person = JSON.stringify(person); //toString()
+    //   // person = JSON.parse(person); //parse toObject JS
+    //
+    // var output = "";
+    //
+    // for (var i = 0; i < people.length; i++) {
+    //   //console.log(people[i].name);
+    //   output+= '<li>' + people[i].name+ '</li>';
+    // }
+    //
+    // document.getElementById("people").innerHTML = output;
+
+
+
+    function loadDoc() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          var response = JSON.parse(xhttp.responseText);
+          var people = response.people;
+
+          var output = "";
+
+          for (var i = 0; i < people.length; i++) {
+            //console.log(people[i].name);
+            output+= '<li>' + people[i].age+ '</li>';
+          }
+
+          document.getElementById("people").innerHTML = output;
+
+
+        }
+      };
+      xhttp.open("GET", "info.json", true);
+      xhttp.send();
+    }
+
+    loadDoc();
+
+    </script>
+
+
+  </body>
+</html>
