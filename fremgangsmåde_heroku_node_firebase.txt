@@ -4,7 +4,9 @@
 
 3. Procfile web: node "navn for startfil".js
 
-4. app.json - 
+4. app.json - lidt ligegyldigt men se bunden
+
+5. heroku create "NAVN PÅ HEROKU APP"
 
 
 
@@ -47,3 +49,12 @@ package.json:
 }
 
 ________________________________________________________________________
+
+app.json eks.:
+
+{
+  "name": "firebaseapp",
+  "description":"firebaseapp with node on heroku",
+  "repository": "https://github.com/byblix/development/tree/master/firebaseapp",
+  "logo": "!null",
+}
