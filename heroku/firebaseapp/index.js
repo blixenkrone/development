@@ -8,7 +8,7 @@ function setupFirebase() {
     storageBucket: "simple-supermarket.appspot.com",
     messagingSenderId: "17693044736"
   };
-  firebase.initializeApp(config);
+  //firebase.initializeApp(config);
 }
 setupFirebase();
 // Initialize Firebase
